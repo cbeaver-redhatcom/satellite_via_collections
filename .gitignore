@@ -1,0 +1,11 @@
+## Logs ##
+ansible-navigator.log 
+
+## ansible config ##
+ansible.cfg 
+
+## vault pass ##
+.vault.pass
+
+## ansible_collections used w/ navigator ##
+collections/ansible_collections/

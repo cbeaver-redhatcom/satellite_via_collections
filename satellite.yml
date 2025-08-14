@@ -6,21 +6,22 @@
 # https://github.com/RedHatSatellite/satellite-ansible-collection
 #
 - name: Satellite Installer Playbook here
-  hosts: localhost
-  remote_user: root
-  collections:
-    - redhat.satellite_operations
-    - redhat.satellite
-
+  hosts: satellite.beaverdam.com
+  remote_user: ansible
+  become: true
+  # collections:
+  #   - redhat.satellite_operations
+  #   - redhat.satellite
+  vars_files:
+    vars/secret.yml
   vars:
    # RHSM Credentials
-    rhsm_username: "your_portal_username_here"
-    rhsm_password: "your_portal_password_here"
+    # rhsm_username: "your_portal_username_here"
+    # rhsm_password: "your_portal_password_here"
 
    # Satellite Information
     sat_user: "admin"
-    sat_pass: "secret"
-    sat_org: "ACME"
+    sat_org: "BEAVERDAM"
     def_scenario: "satellite"
 
     # Standard Values
